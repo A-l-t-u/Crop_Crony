@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.crop_crony">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Crop_Crony.NoActionBar">
+        <activity android:name=".AuctionedProductActivity"></activity>
+        <activity android:name=".BuyerProfileActivity" />
+        <activity android:name=".SellerProfileActivity" />
+        <activity android:name=".ShowRequestsActivity" />
+        <activity android:name=".AuctionResultActivity" />
+        <activity android:name=".SellerMyProductsActivity" />
+        <activity android:name=".CitiesInsertActivity" />
+        <activity android:name=".ItemsInsertActivity" />
+        <activity android:name=".BuyerBiddenProductActivity" />
+        <activity android:name=".AdminMainActivity" />
+        <activity android:name=".ProductApprovingActivity" />
+        <activity android:name=".ProductRequestActivity" />
+        <activity android:name=".SellerMainActivity" />
+        <activity android:name=".BuyerMainActivity" />
+        <activity android:name=".ProductFeedbackActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ShowBidsProductActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SingleColumnInsertActivity" />
+        <activity android:name=".ProductInsertActivity" />
+        <activity android:name=".UserSignUpActivity" />
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

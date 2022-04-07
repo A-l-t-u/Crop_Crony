@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/productRequestDrawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#20242B"
+    tools:context=".ProductRequestActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#20242F"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp">
+
+        <include
+            layout="@layout/toolbar_resource_file"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:src="@drawable/register" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_login_form">
+
+                <TextView
+                    android:id="@+id/productRequestTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Have a Request?"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/productRequestSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/spinner_border"
+                    app:layout_constraintBottom_toTopOf="@+id/productRequestTextLayout2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productRequestTextView" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/productRequestTextLayout2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="60dp"
+                    android:paddingRight="60dp"
+                    app:boxCornerRadiusTopStart="20dp"
+                    app:endIconMode="clear_text"
+                    app:layout_constraintBottom_toTopOf="@+id/productRequestButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productRequestSpinner">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/productRequestEditText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Description..." />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/productRequestButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="60dp"
+                    android:background="@drawable/rounded_ripple_file"
+                    android:elevation="200dp"
+                    android:text="Request..."
+                    android:textSize="18sp"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/baseline_east_white_36"
+                    app:iconGravity="end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productRequestTextLayout2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorSecondary">
+
+        <include layout="@layout/buyers_drawer_resource_file" />
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
